@@ -6,6 +6,8 @@ public class LinearInterpolation : MonoBehaviour
     public Transform end;
     public float t = 0f;
     public float speed = 0.5f;
+    public AnimationCurve curve;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,6 +25,8 @@ public class LinearInterpolation : MonoBehaviour
         }
 
 
-        transform.position = Vector2.Lerp(start.position, end.position, t);
+        //transform.position = Vector2.Lerp(start.position, end.position, t);
+        transform.position = Vector2.Lerp(start.position, end.position, curve.Evaluate(t));
+
     }
 }
