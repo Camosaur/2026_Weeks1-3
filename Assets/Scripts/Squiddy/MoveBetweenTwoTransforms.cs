@@ -8,9 +8,9 @@ public class MoveBetweenTwoTransforms : MonoBehaviour
     public Transform start;
     public Transform end;
 
+    public bool usesAutoTime = true; //Weather this objects counts the lerp automatically. Toggle off if some other script changes the T value
     public float lerpT; //The T value (between 0.0 and 1.0) that I use to lerp between two points
     public float speed; //The speed at wich the object lerps, per second
-
     public AnimationCurve positionToLerpT; // The animationCurve I map onto T
 
     public bool changeX; //Weather this script will effect X axis
@@ -21,7 +21,7 @@ public class MoveBetweenTwoTransforms : MonoBehaviour
     void Update()
     {
         //Update the T value 
-        lerpT += Time.deltaTime * speed;
+        if (usesAutoTime) { lerpT += Time.deltaTime * speed; }
 
 
         //If the end of the animation is reached, reverse the speed
