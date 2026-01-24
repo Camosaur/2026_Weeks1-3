@@ -4,6 +4,10 @@ using UnityEngine.InputSystem;
 public class TankSpawner : MonoBehaviour
 {
     public GameObject tankPrefab;
+    public int howManyTanks = 0;
+
+    public KeyBoardControl tankScript;
+    public GameObject spawnedTank;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,8 +20,11 @@ public class TankSpawner : MonoBehaviour
     {
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
-            Instantiate(tankPrefab, transform.position, transform.rotation);
-            
+            spawnedTank = Instantiate(tankPrefab, transform.position, transform.rotation);
+            howManyTanks++;
+            tankScript = spawnedTank.GetComponent<KeyBoardControl>();
+            tankScript.speed = howManyTanks;
+
         }
     }
 }

@@ -14,6 +14,12 @@ public class growWhenCursorNearby : MonoBehaviour
     public float radius;
 
 
+    void Start()
+    {
+        //Initialize the timer
+        t = GetComponent<Timer>();
+        finder = GetComponent<GetStupidStuff>();
+    }
 
     // Update is called once per frame
     void Update()

@@ -10,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6472607365830447744}
   - component: {fileID: 3928013645215153394}
+  - component: {fileID: 394584061057423790}
+  - component: {fileID: 9162513966740431982}
+  - component: {fileID: 6796432396111710283}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Untagged
@@ -50,6 +53,60 @@ MonoBehaviour:
   speed: 10
   xAxis: 1
   yAxis: 0
+--- !u!114 &394584061057423790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276394713069774859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 308d394755d11fa428320fb6d9323cf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  t: {fileID: 0}
+  finder: {fileID: 0}
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  mouseInRadius: 0
+  pMouseInRadius: 0
+  radius: 0
+--- !u!114 &9162513966740431982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276394713069774859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e17cd756bb4f4d84e9dd8fe33fda206b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCount: 0
+  minTime: 1
+  maxTime: 1.5
+  speed: 10
+  autoReset: 0
+  countDownUponReset: 0
+--- !u!114 &6796432396111710283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276394713069774859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 351a28f914877774f90cfd01229aac6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mousePos: {x: 0, y: 0}
 --- !u!1 &607840945797565697
 GameObject:
   m_ObjectHideFlags: 0
